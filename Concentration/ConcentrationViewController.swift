@@ -28,7 +28,7 @@ class ConcentrationViewController: UIViewController {
     private func updateFlipCountLabel() {
         let attributes: [NSAttributedStringKey:Any] = [
             .strokeWidth : 5.0,
-            .strokeColor : UIColor.orange
+            .strokeColor : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         ]
         let attributedString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes)
         flipCountLabel.attributedText = attributedString
@@ -37,7 +37,7 @@ class ConcentrationViewController: UIViewController {
     private func updateScoreLabel() {
         let attributes: [NSAttributedStringKey:Any] = [
             .strokeWidth : 5.0,
-            .strokeColor : UIColor.orange
+            .strokeColor : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         ]
         let attributedString = NSAttributedString(string: "Score: 0", attributes: attributes)
         scoreLabel.attributedText = attributedString
@@ -59,7 +59,7 @@ class ConcentrationViewController: UIViewController {
     @IBAction private func newGame(_ sender: UIButton) {
         let attributes: [NSAttributedStringKey:Any] = [
             .strokeWidth : 5.0,
-            .strokeColor : UIColor.orange
+            .strokeColor : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         ]
         let attributedString = NSAttributedString(string: "New Game", attributes: attributes)
         sender.setAttributedTitle(attributedString, for: .normal)
@@ -85,10 +85,10 @@ class ConcentrationViewController: UIViewController {
             let card = game.cards[index]
             if card.isFaceUp {
                 button.setTitle(emoji(for: card), for: UIControlState.normal)
-                button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                button.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
             } else {
                 button.setTitle("", for: UIControlState.normal)
-                button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 0) : #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
+                button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 0) : #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
             }
         }
     }
@@ -99,7 +99,7 @@ class ConcentrationViewController: UIViewController {
         flipCount = 0
     }
     
-    var theme: String {
+    var theme: String? {
         didSet {
             emojiChoise = theme ?? ""
             emoji = [:]
