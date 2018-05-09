@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ConcentrationViewController: UIViewController {
     
     
     private lazy var game  = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
@@ -99,7 +99,15 @@ class ViewController: UIViewController {
         flipCount = 0
     }
     
-//    private var emojiChoise = ["🎃", "👻", "🐸", "🦅",   "🦂", "🕷", "🐿", "🦃", "🍄", "🎁"]
+    var theme: String {
+        didSet {
+            emojiChoise = theme ?? ""
+            emoji = [:]
+            updateViewFromModel()
+        }
+    }
+    
+    
     private var emojiChoise = "🎃👻🐸🦅🦂🕷🐿🦃🍄🎁"
     
     private var emoji = [Card:String]()
