@@ -14,6 +14,7 @@
 		2182EE032046214F00598F2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2182EE012046214F00598F2C /* LaunchScreen.storyboard */; };
 		21C36DF820471FDA00C3F54F /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C36DF720471FDA00C3F54F /* Concentration.swift */; };
 		21C36DFA2047223D00C3F54F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C36DF92047223D00C3F54F /* Card.swift */; };
+		21F3BC7C20A392C5000B4846 /* ConcentrationThemeChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F3BC7B20A392C5000B4846 /* ConcentrationThemeChooserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2182EE042046214F00598F2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21C36DF720471FDA00C3F54F /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 		21C36DF92047223D00C3F54F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		21F3BC7B20A392C5000B4846 /* ConcentrationThemeChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationThemeChooserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				21C36DF720471FDA00C3F54F /* Concentration.swift */,
 				21C36DF92047223D00C3F54F /* Card.swift */,
 				2182EDFC2046214F00598F2C /* Main.storyboard */,
+				21F3BC7B20A392C5000B4846 /* ConcentrationThemeChooserViewController.swift */,
 				2182EE0D2046239000598F2C /* Supporting Files */,
 				2182EE042046214F00598F2C /* Info.plist */,
 			);
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21F3BC7C20A392C5000B4846 /* ConcentrationThemeChooserViewController.swift in Sources */,
 				2182EDFB2046214F00598F2C /* ConcentrationViewController.swift in Sources */,
 				2182EDF92046214F00598F2C /* AppDelegate.swift in Sources */,
 				21C36DF820471FDA00C3F54F /* Concentration.swift in Sources */,
