@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConcentrationThemeChooserViewController: UIViewController {
+class ConcentrationThemeChooserViewController: UIViewController, UISplitViewControllerDelegate {
 
     
     let themes = [
@@ -16,6 +16,22 @@ class ConcentrationThemeChooserViewController: UIViewController {
         "Animals" : "🐈🐍🐓🐏🐺🐅🐏🐘🐊🐄🦏🦋",
         "Faces" : "😎😃😇🤣😍🤩🤬🤯🤪🤓🧐🤨"
     ]
+    
+    override func awakeFromNib() {
+        splitViewController?.delegate = self
+    }
+    
+    func splitViewController(
+        _ splitViewController: UISplitViewController,
+        collapseSecondary secondaryViewController: UIViewController,
+        onto primaryViewController: UIViewController) -> Bool {
+        if let cvc = secondaryViewController as? ConcentrationViewController {
+            if cvc.theme == nil {
+                return true
+            }
+        }
+        return false
+    }
     
     // changeTheme method:
     // 1. How to find theme in splitView for iPad versions and iPhones + models
